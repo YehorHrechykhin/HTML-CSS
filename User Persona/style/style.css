@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root{
+    font-size: 10px;
+    font-family: 'Work Sans';
+    --border: .7rem;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+    margin: 0 auto .7rem;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0 auto .7rem;
+}
+
+p{
+    margin:0;
+}
+
+ul{
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 2.75fr 2fr 2fr;
+    padding: 2.7rem 3.8rem;
+    gap:2.2rem;
+    background-color: #FFB084;
+    border-radius: 2rem;
+    max-width: 75.5rem;
+    box-sizing: border-box;
+    margin: 5% auto;
+}
+
+
+.wrapper > div{
+    border-radius: 2rem;
+    background-color: white;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    box-shadow: var(--border) var(--border) black;
+}
+
+.info{
+    grid-row: 1/5;
+    font-size: 1.2rem !important;
+    line-height: 1.4rem !important;
+    padding: 1.5rem !important;
+}
+
+.photo{
+    text-align: center;
+    padding: 1rem;
+}
+
+.photo img{
+    height: 10rem;
+}
+
+.info span{
+    font-weight: 600;
+}
+
+.info p{
+    display: inline-block;
+    margin: .7rem 1rem;
+}
+
+.text{
+    grid-row:5;
+}
+
+.bio{
+    grid-column: 2/4;
+}
+
+.goals{
+    box-shadow: var(--border) var(--border) #29A71E !important;
+}
+
+.goals > h2{
+    color: #29A71E;
+}
+
+.frustrations{
+    grid-row: 2/4;
+    grid-column: 3;
+    box-shadow: var(--border) var(--border) #E13535 !important;
+}
+
+.frustrations > h2{ 
+    color: #E13535;
+}
+
+.dream-companies{
+    grid-row: 3/6;
+    box-shadow: var(--border) var(--border) #3675B0 !important;
+}
+
+.dream-companies > h2{
+    color: #3675B0;
+}
+
+.personality{
+    grid-row: 4/6;
+}
+
+/* Adaptation */
+
+@media screen and (min-width:1600px){
+    :root{
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width:1400px) and (max-width:1599px){
+    :root{
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width: 1799px) {
+    :root{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+
+    .wrapper{
+        grid-template-columns: 100%;
+    }
+
+    .wrapper > div{
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media screen and (max-width: 280px) {
+
+    :root{
+        font-size: 6.5px;
+    }
+
+    .photo img{
+        max-width: 100%;
+        height: auto;
+    }
+}
